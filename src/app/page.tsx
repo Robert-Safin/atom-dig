@@ -5,9 +5,10 @@ import ThemeToggle from "@/components/nav/ThemeToggle";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <Hero />
       <ThemeToggle />
+      <div className="h-screen"></div>
     </div>
   );
 }

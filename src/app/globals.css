@@ -4,23 +4,22 @@
 /* @custom-variant dark (&:is(.dark *)); */
 
 @theme {
-  /* --color-green: #cbf278;
-  --color-purple: #7044ec; */
   --color-teal: #00d5ff;
   --color-blue: #268ceb;
+  --color-purple: #7044ec;
 
   --font-geist-mono: geist-mono;
   --font-inter: inter;
 
   --breakpoint-tablet: 768px;
   --breakpoint-laptop: 1024px;
-  --breakpoint-desktop: 1440;
+  --breakpoint-desktop: 1440px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-text: var(--text);
-  --color-text-alt :var(--text-alt);
+  --color-text-alt: var(--text-alt);
   --color-gradient: var(--gradient);
   --color-teal-burger: var(--burger);
   --color-accent: var(--accent);
@@ -29,12 +28,17 @@
 [data-theme="light"] {
   --background: #d1d4db;
   --text: #10111c;
-  --text-alt: #D1D4DB;
-  --gradient: linear-gradient(
+  --text-alt: #d1d4db;
+  /* --gradient: linear-gradient(
+    180deg,
+    rgba(230, 233, 239, 1) 0%,
+    rgba(26, 45, 64, 1) 110%
+  ); */
+  /* --gradient: linear-gradient(
     180deg,
     rgba(16, 17, 28, 1) 0%,
-    rgba(26, 45, 64, 1) 100%
-  );
+    rgba(26, 45, 64, 1) 110%
+  ); */
   --burger: rgba(112, 68, 236, 1);
   --accent: #7044ec;
 }
@@ -42,96 +46,17 @@
 [data-theme="dark"] {
   --background: #10111c;
   --text: #fefcfa;
-  --text-alt: #10111C;
-  --gradient: linear-gradient(
+  --text-alt: #10111c;
+  /* --gradient: linear-gradient(
+    180deg,
+    rgba(16, 17, 28, 1) 0%,
+    rgba(26, 45, 64, 1) 110%
+  ); */
+  /* --gradient: linear-gradient(
     180deg,
     rgba(230, 233, 239, 1) 0%,
-    rgba(26, 45, 64, 1) 100%
-  );
+    rgba(26, 45, 64, 1) 110%
+  ); */
   --burger: rgba(0, 213, 255, 0.3);
   --accent: #cbf278;
-}
-
-
-@layer components {
-
-  .text-phone {
-    font-family: var(--font-inter);
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 16.5px;
-    letter-spacing: -5%;
-    color: var(--color-text);
-  }
-
-  .footer-phone {
-    font-family: var(--font-geist-mono);
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 12px;
-    letter-spacing: 0%;
-    color: var(--color-text);
-  }
-
-  .h3-phone {
-    font-family: var(--font-inter);
-    font-weight: bold;
-    font-size: 24px;
-    line-height: auto;
-    letter-spacing: -5%;
-    color: var(--color-text);
-  }
-  .h2-phone {
-    font-family: var(--font-inter);
-    font-weight: bolder;
-    font-size: 28px;
-    line-height: auto;
-    letter-spacing: -5%;
-    color: var(--color-text);
-  }
-
-  .h1-phone {
-    font-family: var(--font-inter);
-    font-weight: bolder;
-    font-size: 36px;
-    line-height: 36px;
-    letter-spacing: -5%;
-    color: var(--color-text);
-  }
-
-  .bubble-phone {
-    font-family: var(--font-inter);
-    font-weight: bolder;
-    font-size: 12px;
-    line-height: auto;
-    letter-spacing: -4%;
-    color: var(--color-text);
-  }
-
-  .tp-phone {
-    font-family: var(--font-inter);
-    font-weight: bolder;
-    font-size: 12px;
-    line-height: auto;
-    letter-spacing: 11%;
-    color: var(--color-text);
-  }
-
-  .button-phone {
-    font-family: var(--font-inter);
-    font-weight: bolder;
-    font-size: 15px;
-    line-height: 18px;
-    letter-spacing: -5%;
-    color: var(--color-text);
-  }
-
-  .hero-phone {
-    font-family: var(--font-inter);
-    font-weight: bolder;
-    font-size: 40px;
-    line-height: 44px;
-    letter-spacing: -5%;
-    color: var(--color-text);
-  }
 }
