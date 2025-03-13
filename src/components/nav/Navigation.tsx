@@ -14,7 +14,7 @@ const Navigation = () => {
   }, []);
 
   return (
-    <nav className="tablet:px-[24px] laptop:px-[32px] laptop:mt-[36px] desktop:px-[42px] absolute top-0 mt-[18px] flex w-full items-center justify-between px-[12px]">
+    <nav className="tablet:px-[24px] laptop:px-[32px] laptop:mt-[36px] desktop:px-[42px] absolute top-0 mt-[18px] flex w-full max-w-[1920px] items-center justify-between px-[12px]">
       {isMounted && resolvedTheme ? (
         <Image
           src={`/logo/${resolvedTheme}-logo.png`}
