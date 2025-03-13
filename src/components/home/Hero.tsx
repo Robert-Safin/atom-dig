@@ -4,7 +4,7 @@ import TextHero from "../typography/TextHero";
 import TextTP from "../typography/TextTP";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-
+import { motion } from "motion/react";
 const Hero = () => {
   const { resolvedTheme } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
@@ -16,13 +16,65 @@ const Hero = () => {
   return (
     <div className="tablet:pb-[20px] laptop:pb-[26px] desktop:pb-[32px] tablet:px-[24px] tablet:pt-[100px] desktop:pt-[200px] laptop:px-[56px] desktop:px-[72px] tablet:h-[540px] laptop:h-[720px] desktop:h-[960px] relative z-0 flex h-[680px] flex-col justify-between px-[21px] pt-[82px] pb-[32px]">
       <div className="absolute top-0 left-0 -z-10 flex h-full w-full max-w-screen flex-col justify-between">
-        <div className="bg-teal -z-10 h-[71px] w-[700px] blur-[200px]" />
-        <div className="bg-purple -z-10 h-[156px] w-[524px] blur-[200px]" />
+        <motion.div
+          className="bg-teal -z-10 h-[71px] w-[700px]"
+          style={{
+            filter: "blur(200px)",
+          }}
+          initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
+          animate={{ scale: [0.5, 1.5, 1, 0.75], rotate: [50, 0, -20, 0] }}
+          transition={{
+            duration: 10,
+            times: [0, 0.3, 0.7, 1],
+            ease: "easeInOut",
+            repeat: Infinity,
+          }}
+        />
+        <motion.div
+          className="bg-purple -z-10 h-[156px] w-[524px]"
+          style={{
+            filter: "blur(200px)",
+          }}
+          initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
+          animate={{ scale: [0.5, 1.5, 1, 0.75], rotate: [50, 0, -20, 0] }}
+          transition={{
+            duration: 10,
+            times: [0, 0.3, 0.7, 1],
+            ease: "easeInOut",
+            repeat: Infinity,
+          }}
+        />
       </div>
 
       <div className="absolute top-0 right-0 flex h-full w-full max-w-screen items-center justify-between">
-        <div className="bg-teal -z-10 h-[112px] w-[314px] blur-[150px]" />
-        <div className="bg-purple -z-10 h-[112px] w-[314px] blur-[200px]" />
+        <motion.div
+          className="bg-teal -z-10 h-[112px] w-[314px]"
+          style={{
+            filter: "blur(200px)",
+          }}
+          initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
+          animate={{ scale: [0.5, 1.5, 1, 0.75], rotate: [50, 0, -20, 0] }}
+          transition={{
+            duration: 10,
+            times: [0, 0.3, 0.7, 1],
+            ease: "easeInOut",
+            repeat: Infinity,
+          }}
+        />
+        <motion.div
+          className="bg-purple -z-10 h-[112px] w-[314px]"
+          style={{
+            filter: "blur(200px)",
+          }}
+          initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
+          animate={{ scale: [0.5, 1.5, 1, 0.75], rotate: [50, 0, -20, 0] }}
+          transition={{
+            duration: 10,
+            times: [0, 0.3, 0.7, 1],
+            ease: "easeInOut",
+            repeat: Infinity,
+          }}
+        />
       </div>
 
       <Image
