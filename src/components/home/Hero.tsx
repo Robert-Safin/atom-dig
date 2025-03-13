@@ -17,29 +17,29 @@ const Hero = () => {
     <div className="tablet:pb-[20px] laptop:pb-[26px] desktop:pb-[32px] tablet:px-[24px] tablet:pt-[100px] desktop:pt-[200px] laptop:px-[56px] desktop:px-[72px] tablet:h-[540px] laptop:h-[720px] desktop:h-[960px] relative z-0 flex h-[680px] flex-col justify-between px-[21px] pt-[82px] pb-[32px]">
       <div className="absolute top-0 left-0 -z-10 flex h-full w-full max-w-screen flex-col justify-between">
         <motion.div
-          className="bg-teal -z-10 h-[71px] w-[700px]"
           style={{
-            filter: "blur(200px)",
+            willChange: "filter",
           }}
-          initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
-          animate={{ scale: [0.5, 1.5, 1, 0.75], rotate: [50, 0, -20, 0] }}
+          className="bg-teal -z-10 h-[100px] w-[1000px] opacity-80"
+          initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
+          animate={{ scale: [0.6, 0.8, 0.7, 1], rotate: [0, 0, -20, 0] }}
           transition={{
-            duration: 10,
-            times: [0, 0.3, 0.7, 1],
+            duration: 20,
+            times: [0, 0.1, 0.9, 1],
             ease: "easeInOut",
             repeat: Infinity,
           }}
         />
         <motion.div
-          className="bg-purple -z-10 h-[156px] w-[524px]"
           style={{
-            filter: "blur(200px)",
+            willChange: "filter",
           }}
-          initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
-          animate={{ scale: [0.5, 1.5, 1, 0.75], rotate: [50, 0, -20, 0] }}
+          className="bg-purple -z-10 h-[156px] w-[724px] opacity-80"
+          initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
+          animate={{ scale: [0.7, 0.8, 0.9, 1], rotate: [0, 40, -20, 0] }}
           transition={{
-            duration: 10,
-            times: [0, 0.3, 0.7, 1],
+            duration: 20,
+            times: [0, 0.2, 0.8, 1],
             ease: "easeInOut",
             repeat: Infinity,
           }}
@@ -48,29 +48,32 @@ const Hero = () => {
 
       <div className="absolute top-0 right-0 flex h-full w-full max-w-screen items-center justify-between">
         <motion.div
-          className="bg-teal -z-10 h-[112px] w-[314px]"
           style={{
-            filter: "blur(200px)",
+            willChange: "filter",
           }}
-          initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
-          animate={{ scale: [0.5, 1.5, 1, 0.75], rotate: [50, 0, -20, 0] }}
+          className="bg-teal -z-10 h-[212px] w-[314px] opacity-80"
+          initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
+          animate={{
+            scale: [1, 0.9, 0.8, 0.1],
+            rotate: [0, 30, -200, 0],
+          }}
           transition={{
-            duration: 10,
-            times: [0, 0.3, 0.7, 1],
+            duration: 20,
+            times: [0, 0.4, 0.6, 1],
             ease: "easeInOut",
             repeat: Infinity,
           }}
         />
         <motion.div
-          className="bg-purple -z-10 h-[112px] w-[314px]"
           style={{
-            filter: "blur(200px)",
+            willChange: "filter",
           }}
-          initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
-          animate={{ scale: [0.5, 1.5, 1, 0.75], rotate: [50, 0, -20, 0] }}
+          className="bg-purple -z-10 h-[212px] w-[614px] opacity-80"
+          initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
+          animate={{ scale: [1, 0.7, 0.8, 0.9], rotate: [0, 0, -40, 0] }}
           transition={{
-            duration: 10,
-            times: [0, 0.3, 0.7, 1],
+            duration: 20,
+            times: [0, 0.6, 0.4, 1],
             ease: "easeInOut",
             repeat: Infinity,
           }}

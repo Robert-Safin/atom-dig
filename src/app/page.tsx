@@ -6,7 +6,7 @@ import ThemeToggle from "@/components/nav/ThemeToggle";
 
 export default function Home() {
   return (
-    <div className="desktop:overflow-visible overflow-x-hidden">
+    <div className="overflow-x-hidden">
       <div className="mx-auto">
         <Hero />
       </div>
