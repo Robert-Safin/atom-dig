@@ -20,43 +20,67 @@
   --color-background: var(--background);
   --color-text: var(--text);
   --color-text-alt: var(--text-alt);
-  --color-gradient: var(--gradient);
   --color-teal-burger: var(--burger);
   --color-accent: var(--accent);
+  --color-text-stroke: var(--text-stroke);
+  --color-text-stroke-shine: var(--text-stroke-shine);
+
+  --color-ring: var(--ring);
+
+  --color-background-opaque: var(--background-opaque);
+
+  /* --text-gradient: var(--text-gradient); */
+  --color-ring-glow: var(--ring-glow);
 }
 
 [data-theme="light"] {
   --background: #d1d4db;
   --text: #10111c;
   --text-alt: #d1d4db;
-  /* --gradient: linear-gradient(
-    180deg,
-    rgba(230, 233, 239, 1) 0%,
-    rgba(26, 45, 64, 1) 110%
-  ); */
-  /* --gradient: linear-gradient(
-    180deg,
-    rgba(16, 17, 28, 1) 0%,
-    rgba(26, 45, 64, 1) 110%
-  ); */
+
   --burger: rgba(112, 68, 236, 1);
   --accent: #7044ec;
+  --text-stroke: #948dd6;
+  --text-stroke-shine: rgba(150, 142, 213, 1);
+
+  --ring: rgba(137, 130, 208, 1);
+  --background-opaque: rgba(197, 198, 215, 0.4);
+  /* --text-gradient: linear-gradient(red, blue); */
+  --ring-glow: red;
 }
 
 [data-theme="dark"] {
   --background: #10111c;
   --text: #fefcfa;
   --text-alt: #10111c;
-  /* --gradient: linear-gradient(
-    180deg,
-    rgba(16, 17, 28, 1) 0%,
-    rgba(26, 45, 64, 1) 110%
-  ); */
-  /* --gradient: linear-gradient(
-    180deg,
-    rgba(230, 233, 239, 1) 0%,
-    rgba(26, 45, 64, 1) 110%
-  ); */
+
   --burger: rgba(0, 213, 255, 0.3);
   --accent: #cbf278;
+  --text-stroke: #2a283c;
+  --text-stroke-shine: rgba(56, 54, 70, 1);
+
+  --ring: rgba(63, 58, 89, 1);
+  --background-opaque: rgba(19, 20, 28, 0.4);
+  /* --text-gradient: linear-gradient(180deg, rgba(230,233,239,1) 40%, rgba(127,146,165,1)100%); */
+  --ring-glow: #555363;
+}
+
+.text-gradient-dm {
+  background-image: linear-gradient(
+    180deg,
+    rgba(230, 233, 239, 1) 40%,
+    rgba(127, 146, 165, 1) 100%
+  );
+  color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-lm {
+  background-image: linear-gradient(
+    180deg,
+    rgba(16, 17, 28, 1) 51%,
+    rgba(26, 45, 64, 1) 100%
+  );
+  color: transparent;
+  background-clip: text;
 }

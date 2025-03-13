@@ -28,7 +28,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className="bg-background mx-auto max-w-[1920px] min-w-[374px]"
+      className="bg-background min-w-[374px]"
     >
       <body className={`${geistMono.variable} ${inter.variable} antialiased`}>
         <ThemeProvider>

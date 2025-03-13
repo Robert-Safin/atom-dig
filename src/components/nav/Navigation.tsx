@@ -17,7 +17,7 @@ const Navigation = () => {
     <nav className="tablet:px-[24px] laptop:px-[32px] laptop:mt-[36px] desktop:px-[42px] absolute top-0 mt-[18px] flex w-full max-w-[1920px] items-center justify-between px-[12px]">
       {isMounted && resolvedTheme ? (
         <Image
-          src={`/logo/${resolvedTheme}-logo.png`}
+          src={`/logo/${resolvedTheme}-logo.svg`}
           width={400}
           height={300}
           alt="logo"
@@ -32,11 +32,11 @@ const Navigation = () => {
       </div>
 
       <div className="laptop:flex hidden space-x-[24px]">
-        <button className="border-text h-[56px] w-[152px] cursor-pointer rounded-[26px] border-[2px]">
+        <button className="border-text h-[46px] w-[152px] cursor-pointer rounded-[26px] border-[2px]">
           <TextButton text="Contact Us" />
         </button>
 
-        <button className="border-text bg-text text-text-alt h-[56px] w-[152px] cursor-pointer rounded-[26px] border-[2px]">
+        <button className="border-text bg-text text-text-alt h-[46px] w-[152px] cursor-pointer rounded-[26px] border-[2px]">
           <TextButton text="Client Login" />
         </button>
       </div>
