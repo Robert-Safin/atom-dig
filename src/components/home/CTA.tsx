@@ -26,22 +26,11 @@ const CTA = () => {
               <div
                 className={
                   theme === "dark"
-                    ? `bg-text-stroke border-ring relative mx-auto w-fit overflow-hidden rounded-[26px] border-[2px] px-[16px] py-[8px] text-center`
-                    : `border-ring relative mx-auto w-fit overflow-hidden rounded-[26px] border-[2px] px-[18px] py-[8px] text-center`
+                    ? `bg-text-stroke border-ring mx-auto w-fit rounded-[26px] border-[2px] px-[16px] py-[8px] text-center`
+                    : `border-ring mx-auto w-fit rounded-[26px] border-[2px] px-[18px] py-[8px] text-center`
                 }
               >
                 <TextBubble text="Low-Risk, High-Precision" />
-                <BorderBeam
-                  size={50}
-                  initialOffset={0}
-                  className="via-ring-glow from-transparent to-transparent"
-                  transition={{
-                    type: "spring",
-                    stiffness: 60,
-                    damping: 20,
-                    duration: 10,
-                  }}
-                />
               </div>
             )}
 
@@ -69,11 +58,3 @@ const CTA = () => {
 };
 
 export default CTA;
-{
-  /* <H1
-text="Atomic Digital is a cutting-edge hedge fund specializing in
-quantitative trading strategies for digital assets. In a market known for extreme volatility, we focus
-on delivering stable, low-risk returns while capitalizing on the inefficiencies of this emerging space.
-Our data-driven approach aims to outperform traditional markets, unlocking new opportunities in the rapidly evolving world of crypto."
-/> */
-}

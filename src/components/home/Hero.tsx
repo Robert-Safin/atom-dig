@@ -133,7 +133,7 @@ const Hero = () => {
         </div>
 
         <button className="border-accent text-accent tablet:mt-[48px] laptop:mt-[64px] desktop:mt-[84px] laptop:w-[195px] laptop:h-[56px] mt-[34px] h-[42px] w-[146px] cursor-pointer rounded-[26px] border-[2px]">
-          <TextButton text="Get Started" />
+          <TextButton text="Get Started" invertText={false} />
         </button>
       </div>
 

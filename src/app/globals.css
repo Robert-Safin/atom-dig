@@ -46,8 +46,8 @@
   --ring-glow: red;
   --strategy-stroke: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(127, 146, 165, 1) 100%
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(127, 146, 165, 0.3) 100%
   );
 
   --card-bg: rgba(202, 203, 219, 1);
@@ -66,8 +66,8 @@
   --ring-glow: #555363;
   --strategy-stroke: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(112, 68, 236, 0.5) 100%
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(112, 68, 236, 0.3) 100%
   );
   --card-bg: rgba(26, 25, 43, 1);
 }

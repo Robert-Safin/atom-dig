@@ -33,11 +33,11 @@ const Navigation = () => {
 
       <div className="laptop:flex hidden space-x-[24px]">
         <button className="border-text h-[46px] w-[152px] cursor-pointer rounded-[26px] border-[2px]">
-          <TextButton text="Contact Us" />
+          <TextButton text="Contact Us" invertText={false} />
         </button>
 
         <button className="border-text bg-text text-text-alt h-[46px] w-[152px] cursor-pointer rounded-[26px] border-[2px]">
-          <TextButton text="Client Login" />
+          <TextButton text="Client Login" invertText={false} />
         </button>
       </div>
     </nav>
