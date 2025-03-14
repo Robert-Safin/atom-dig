@@ -14,7 +14,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="tablet:pb-[20px] laptop:pb-[26px] desktop:pb-[32px] tablet:px-[24px] tablet:pt-[100px] desktop:pt-[200px] laptop:px-[56px] desktop:px-[72px] tablet:h-[540px] laptop:h-[720px] desktop:h-[960px] relative z-0 flex h-[680px] flex-col justify-between px-[21px] pt-[82px] pb-[32px]">
+    <div className="tablet:pb-[20px] laptop:pb-[26px] desktop:pb-[32px] tablet:px-[24px] tablet:pt-[100px] desktop:pt-[200px] laptop:px-[56px] desktop:px-[72px] tablet:h-[540px] laptop:h-[720px] desktop:h-[960px] relative z-0 mx-auto flex h-[680px] max-w-[1920px] flex-col justify-between px-[21px] pt-[82px] pb-[32px]">
       <div className="absolute top-0 left-0 -z-10 flex h-full w-full max-w-screen flex-col justify-between">
         <motion.div
           style={{
@@ -22,7 +22,15 @@ const Hero = () => {
           }}
           className="bg-teal -z-10 h-[100px] w-[1000px] opacity-80"
           initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
-          animate={{ scale: [0.6, 0.8, 0.7, 1], rotate: [0, 0, -20, 0] }}
+          animate={{
+            scale: [0.6, 0.8, 0.7, 1],
+            filter: [
+              "blur(150px)",
+              "blur(125px)",
+              "blur(175px)",
+              "blur(150px)",
+            ],
+          }}
           transition={{
             duration: 20,
             times: [0, 0.1, 0.9, 1],
@@ -36,9 +44,17 @@ const Hero = () => {
           }}
           className="bg-purple -z-10 h-[156px] w-[724px] opacity-80"
           initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
-          animate={{ scale: [0.7, 0.8, 0.9, 1], rotate: [0, 40, -20, 0] }}
+          animate={{
+            scale: [0.7, 0.8, 0.9, 1],
+            filter: [
+              "blur(150px)",
+              "blur(125px)",
+              "blur(175px)",
+              "blur(150px)",
+            ],
+          }}
           transition={{
-            duration: 20,
+            duration: 10,
             times: [0, 0.2, 0.8, 1],
             ease: "easeInOut",
             repeat: Infinity,
@@ -54,8 +70,13 @@ const Hero = () => {
           className="bg-teal -z-10 h-[212px] w-[314px] opacity-80"
           initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
           animate={{
-            scale: [1, 0.9, 0.8, 0.1],
-            rotate: [0, 30, -200, 0],
+            scale: [1, 0.9, 0.8, 1],
+            filter: [
+              "blur(150px)",
+              "blur(125px)",
+              "blur(175px)",
+              "blur(150px)",
+            ],
           }}
           transition={{
             duration: 20,
@@ -70,10 +91,18 @@ const Hero = () => {
           }}
           className="bg-purple -z-10 h-[212px] w-[614px] opacity-80"
           initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
-          animate={{ scale: [1, 0.7, 0.8, 0.9], rotate: [0, 0, -40, 0] }}
+          animate={{
+            scale: [1, 0.7, 0.8, 1],
+            filter: [
+              "blur(150px)",
+              "blur(125px)",
+              "blur(175px)",
+              "blur(150px)",
+            ],
+          }}
           transition={{
             duration: 20,
-            times: [0, 0.6, 0.4, 1],
+            times: [0, 0.4, 0.6, 1],
             ease: "easeInOut",
             repeat: Infinity,
           }}
