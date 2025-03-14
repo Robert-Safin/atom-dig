@@ -49,8 +49,6 @@ export default function RootLayout({
           enableSystem={true}
           themes={["light", "dark"]}
         >
-
-
           <Navigation />
 
           {children}

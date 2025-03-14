@@ -24,45 +24,52 @@
   --color-accent: var(--accent);
   --color-text-stroke: var(--text-stroke);
   --color-text-stroke-shine: var(--text-stroke-shine);
-
   --color-ring: var(--ring);
-
   --color-background-opaque: var(--background-opaque);
-
-  /* --text-gradient: var(--text-gradient); */
   --color-ring-glow: var(--ring-glow);
+
+  --color-strategy-stroke: var(--strategy-stroke);
+
+  --color-card-bg: var(--card-bg);
 }
 
 [data-theme="light"] {
   --background: #d1d4db;
   --text: #10111c;
   --text-alt: #d1d4db;
-
   --burger: rgba(112, 68, 236, 1);
   --accent: #7044ec;
   --text-stroke: #948dd6;
   --text-stroke-shine: rgba(150, 142, 213, 1);
-
   --ring: rgba(137, 130, 208, 1);
   --background-opaque: rgba(197, 198, 215, 0.4);
-  /* --text-gradient: linear-gradient(red, blue); */
   --ring-glow: red;
+  --strategy-stroke: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(127, 146, 165, 1) 100%
+  );
+
+  --card-bg: rgba(202, 203, 219, 1);
 }
 
 [data-theme="dark"] {
   --background: #10111c;
   --text: #fefcfa;
   --text-alt: #10111c;
-
   --burger: rgba(0, 213, 255, 0.3);
   --accent: #cbf278;
   --text-stroke: #2a283c;
   --text-stroke-shine: rgba(56, 54, 70, 1);
-
   --ring: rgba(63, 58, 89, 1);
   --background-opaque: rgba(19, 20, 28, 0.4);
-  /* --text-gradient: linear-gradient(180deg, rgba(230,233,239,1) 40%, rgba(127,146,165,1)100%); */
   --ring-glow: #555363;
+  --strategy-stroke: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(112, 68, 236, 0.5) 100%
+  );
+  --card-bg: rgba(26, 25, 43, 1);
 }
 
 .text-gradient-dm {
@@ -85,9 +92,8 @@
   background-clip: text;
 }
 
-
 .cta-shadow-dm {
-  box-shadow:  0px 0px 100px 12px rgba(177, 158, 255, 0.03)inset;
-  /* -webkit-box-shadow: 0px 0px 118px 22px rgba(0,0,0,0.75) inset;
-  -moz-box-shadow: 0px 0px 118px 22px rgba(0,0,0,0.75) inset; */
+  box-shadow: 0px 0px 100px 12px rgba(177, 158, 255, 0.03) inset;
+  -webkit-box-shadow: 0px 0px 100px 12px rgba(177, 158, 255, 0.03) inset;
+  -moz-box-shadow: 0px 0px 100px 12px rgba(177, 158, 255, 0.03) inset;
 }

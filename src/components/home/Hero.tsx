@@ -5,6 +5,7 @@ import TextTP from "../typography/TextTP";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { motion } from "motion/react";
+
 const Hero = () => {
   const { resolvedTheme } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
@@ -20,20 +21,20 @@ const Hero = () => {
           style={{
             willChange: "filter",
           }}
-          className="bg-teal -z-10 h-[100px] w-[1000px] opacity-80"
+          className="bg-teal desktop:opacity-50 -z-10 h-3/12 w-7/12 opacity-80"
           initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
           animate={{
-            scale: [0.6, 0.8, 0.7, 1],
+            scale: [1, 0.8, 0.7, 1],
             filter: [
               "blur(150px)",
-              "blur(125px)",
-              "blur(175px)",
+              "blur(100px)",
+              "blur(200px)",
               "blur(150px)",
             ],
           }}
           transition={{
-            duration: 20,
-            times: [0, 0.1, 0.9, 1],
+            duration: 10,
+            times: [0, 0.3, 0.6, 1],
             ease: "easeInOut",
             repeat: Infinity,
           }}
@@ -42,20 +43,20 @@ const Hero = () => {
           style={{
             willChange: "filter",
           }}
-          className="bg-purple -z-10 h-[156px] w-[724px] opacity-80"
+          className="bg-purple desktop:opacity-50 -z-10 h-6/12 w-3/12 border-2 opacity-80"
           initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
           animate={{
-            scale: [0.7, 0.8, 0.9, 1],
+            scale: [1, 0.8, 0.9, 1],
             filter: [
               "blur(150px)",
-              "blur(125px)",
-              "blur(175px)",
+              "blur(100px)",
+              "blur(200px)",
               "blur(150px)",
             ],
           }}
           transition={{
             duration: 10,
-            times: [0, 0.2, 0.8, 1],
+            times: [0, 0.3, 0.6, 1],
             ease: "easeInOut",
             repeat: Infinity,
           }}
@@ -67,20 +68,20 @@ const Hero = () => {
           style={{
             willChange: "filter",
           }}
-          className="bg-teal -z-10 h-[212px] w-[314px] opacity-80"
+          className="bg-teal desktop:opacity-50 -z-10 h-3/12 w-2/12 opacity-80"
           initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
           animate={{
             scale: [1, 0.9, 0.8, 1],
             filter: [
               "blur(150px)",
-              "blur(125px)",
-              "blur(175px)",
+              "blur(100px)",
+              "blur(200px)",
               "blur(150px)",
             ],
           }}
           transition={{
-            duration: 20,
-            times: [0, 0.4, 0.6, 1],
+            duration: 10,
+            times: [0, 0.3, 0.6, 1],
             ease: "easeInOut",
             repeat: Infinity,
           }}
@@ -89,20 +90,20 @@ const Hero = () => {
           style={{
             willChange: "filter",
           }}
-          className="bg-purple -z-10 h-[212px] w-[614px] opacity-80"
+          className="bg-purple desktop:opacity-50 -z-10 h-7/12 w-4/12 opacity-80"
           initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
           animate={{
             scale: [1, 0.7, 0.8, 1],
             filter: [
               "blur(150px)",
-              "blur(125px)",
-              "blur(175px)",
+              "blur(100px)",
+              "blur(200px)",
               "blur(150px)",
             ],
           }}
           transition={{
-            duration: 20,
-            times: [0, 0.4, 0.6, 1],
+            duration: 10,
+            times: [0, 0.3, 0.6, 1],
             ease: "easeInOut",
             repeat: Infinity,
           }}
@@ -141,7 +142,7 @@ const Hero = () => {
         {isMounted && resolvedTheme ? (
           <div className="tablet:space-x-[32px] laptop:space-x-[42px] desktop:space-x-[52px] flex items-center space-x-[19px]">
             <Image
-              src={`/partners/${resolvedTheme}/binance.svg`}
+              src={`/partners/${resolvedTheme}/binance.png`}
               width={400}
               height={300}
               alt="binance logo"
@@ -149,28 +150,28 @@ const Hero = () => {
             />
 
             <Image
-              src={`/partners/${resolvedTheme}/northern-trust.svg`}
+              src={`/partners/${resolvedTheme}/northern-trust.png`}
               width={400}
               height={300}
               alt="binance logo"
               className="tablet:h-[55px] laptop:h-[74px] desktop:h-[92px] h-[35px] w-auto object-cover"
             />
             <Image
-              src={`/partners/${resolvedTheme}/nav.svg`}
+              src={`/partners/${resolvedTheme}/nav.png`}
               width={400}
               height={300}
               alt="binance logo"
               className="tablet:h-[44px] laptop:h-[59px] desktop:h-[74px] h-[28px] w-auto object-cover"
             />
             <Image
-              src={`/partners/${resolvedTheme}/bybit.svg`}
+              src={`/partners/${resolvedTheme}/bybit.png`}
               width={400}
               height={300}
               alt="binance logo"
               className="tablet:h-[25px] laptop:h-[33px] desktop:h-[42px] h-[16px] w-auto object-cover"
             />
             <Image
-              src={`/partners/${resolvedTheme}/kraken.svg`}
+              src={`/partners/${resolvedTheme}/kraken.png`}
               width={400}
               height={300}
               alt="binance logo"
