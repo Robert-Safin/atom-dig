@@ -6,7 +6,6 @@ import Hero from "@/components/home/Hero";
 import Strategies from "@/components/home/Strategies";
 import ThemeToggle from "@/components/nav/ThemeToggle";
 
-
 export default function Home() {
   return (
     <div className="overflow-x-hidden">

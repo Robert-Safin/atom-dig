@@ -15,14 +15,14 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className=" tablet:pb-[20px] laptop:pb-[26px] desktop:pb-[32px] tablet:px-[24px] tablet:pt-[100px] desktop:pt-[200px] laptop:px-[56px] desktop:px-[72px] tablet:h-[540px] laptop:h-[720px] desktop:h-[960px] relative z-0 mx-auto flex h-[680px] max-w-[1920px] flex-col justify-between px-[21px] pt-[82px] pb-[32px]">
+    <div className="tablet:pb-[20px] laptop:pb-[26px] desktop:pb-[32px] tablet:px-[24px] tablet:pt-[100px] desktop:pt-[200px] laptop:px-[56px] desktop:px-[72px] tablet:h-[540px] laptop:h-[720px] desktop:h-screen relative z-0 mx-auto flex h-[680px] max-w-[1920px] flex-col justify-between px-[21px] pt-[82px] pb-[32px]">
       <div className="absolute top-0 left-0 -z-10 flex h-full w-full max-w-screen flex-col justify-between">
         <motion.div
           style={{
             willChange: "filter",
-            borderRadius: "50% 50%"
+            borderRadius: "50% 50%",
           }}
-          className="bg-teal pointer-events-none -z-10 h-[120px] w-[1200px] rounded-full self-end relative top-[48px] -right-[24px] "
+          className="bg-teal pointer-events-none relative top-[48px] -right-[24px] -z-10 h-[120px] w-[1200px] self-end rounded-full"
           initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
           // animate={{
           //   scale: [1, 0.8, 0.7, 1],
@@ -38,9 +38,9 @@ const Hero = () => {
         <motion.div
           style={{
             willChange: "filter",
-             borderRadius: "50% 50%"
+            borderRadius: "50% 50%",
           }}
-          className="bg-purple pointer-events-none -z-10 h-[140px] w-[720px] "
+          className="bg-purple pointer-events-none -z-10 h-[140px] w-[720px]"
           initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
           // animate={{
           //   scale: [1, 0.8, 0.9, 1],
@@ -59,9 +59,9 @@ const Hero = () => {
         <motion.div
           style={{
             willChange: "filter",
-             borderRadius: "50% 50%"
+            borderRadius: "50% 50%",
           }}
-          className="bg-teal pointer-events-none -z-10 h-[140px] w-[520px] "
+          className="bg-teal pointer-events-none -z-10 h-[140px] w-[520px]"
           initial={{ scale: 1, rotate: 0, filter: "blur(220px)" }}
           // animate={{
           //   scale: [1, 0.9, 0.8, 1],
@@ -77,9 +77,9 @@ const Hero = () => {
         <motion.div
           style={{
             willChange: "filter",
-             borderRadius: "50% 50%"
+            borderRadius: "50% 50%",
           }}
-          className="bg-purple pointer-events-none -z-10 h-[140px] w-[520px] "
+          className="bg-purple pointer-events-none -z-10 h-[140px] w-[520px]"
           initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
           // animate={{
           //   scale: [1, 0.7, 0.8, 1],
@@ -125,7 +125,7 @@ const Hero = () => {
         )}
       </div>
 
-      <div className="tablet:items-end tablet:space-y-[10px] laptop:space-y-[20px] desktop:space-y-[24px] flex flex-col items-center space-y-[16px] sticky bottom-0 right-0">
+      <div className="tablet:items-end tablet:space-y-[10px] laptop:space-y-[20px] desktop:space-y-[24px] flex flex-col items-center space-y-[16px]">
         <TextTP text="OUR TRUSTED PARTNERS" />
         {isMounted && resolvedTheme ? (
           <div className="tablet:space-x-[32px] laptop:space-x-[42px] desktop:space-x-[52px] flex items-center space-x-[19px]">
