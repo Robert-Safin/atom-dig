@@ -15,23 +15,19 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="tablet:pb-[20px] laptop:pb-[26px] desktop:pb-[32px] tablet:px-[24px] tablet:pt-[100px] desktop:pt-[200px] laptop:px-[56px] desktop:px-[72px] tablet:h-[540px] laptop:h-[720px] desktop:h-[960px] relative z-0 mx-auto flex h-[680px] max-w-[1920px] flex-col justify-between px-[21px] pt-[82px] pb-[32px]">
+    <div className=" tablet:pb-[20px] laptop:pb-[26px] desktop:pb-[32px] tablet:px-[24px] tablet:pt-[100px] desktop:pt-[200px] laptop:px-[56px] desktop:px-[72px] tablet:h-[540px] laptop:h-[720px] desktop:h-[960px] relative z-0 mx-auto flex h-[680px] max-w-[1920px] flex-col justify-between px-[21px] pt-[82px] pb-[32px]">
       <div className="absolute top-0 left-0 -z-10 flex h-full w-full max-w-screen flex-col justify-between">
         <motion.div
           style={{
             willChange: "filter",
+            borderRadius: "50% 50%"
           }}
-          className="bg-teal desktop:opacity-50 -z-10 h-3/12 w-7/12 opacity-80"
-          initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
-          animate={{
-            scale: [1, 0.8, 0.7, 1],
-            filter: [
-              "blur(150px)",
-              "blur(100px)",
-              "blur(200px)",
-              "blur(150px)",
-            ],
-          }}
+          className="bg-teal pointer-events-none -z-10 h-[120px] w-[1200px] rounded-full self-end relative top-[48px] -right-[24px] "
+          initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
+          // animate={{
+          //   scale: [1, 0.8, 0.7, 1],
+
+          // }}
           transition={{
             duration: 10,
             times: [0, 0.3, 0.6, 1],
@@ -42,18 +38,14 @@ const Hero = () => {
         <motion.div
           style={{
             willChange: "filter",
+             borderRadius: "50% 50%"
           }}
-          className="bg-purple desktop:opacity-50 -z-10 h-6/12 w-3/12 border-2 opacity-80"
-          initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
-          animate={{
-            scale: [1, 0.8, 0.9, 1],
-            filter: [
-              "blur(150px)",
-              "blur(100px)",
-              "blur(200px)",
-              "blur(150px)",
-            ],
-          }}
+          className="bg-purple pointer-events-none -z-10 h-[140px] w-[720px] "
+          initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
+          // animate={{
+          //   scale: [1, 0.8, 0.9, 1],
+
+          // }}
           transition={{
             duration: 10,
             times: [0, 0.3, 0.6, 1],
@@ -67,18 +59,14 @@ const Hero = () => {
         <motion.div
           style={{
             willChange: "filter",
+             borderRadius: "50% 50%"
           }}
-          className="bg-teal desktop:opacity-50 -z-10 h-3/12 w-2/12 opacity-80"
-          initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
-          animate={{
-            scale: [1, 0.9, 0.8, 1],
-            filter: [
-              "blur(150px)",
-              "blur(100px)",
-              "blur(200px)",
-              "blur(150px)",
-            ],
-          }}
+          className="bg-teal pointer-events-none -z-10 h-[140px] w-[520px] "
+          initial={{ scale: 1, rotate: 0, filter: "blur(220px)" }}
+          // animate={{
+          //   scale: [1, 0.9, 0.8, 1],
+
+          // }}
           transition={{
             duration: 10,
             times: [0, 0.3, 0.6, 1],
@@ -89,18 +77,14 @@ const Hero = () => {
         <motion.div
           style={{
             willChange: "filter",
+             borderRadius: "50% 50%"
           }}
-          className="bg-purple desktop:opacity-50 -z-10 h-7/12 w-4/12 opacity-80"
-          initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
-          animate={{
-            scale: [1, 0.7, 0.8, 1],
-            filter: [
-              "blur(150px)",
-              "blur(100px)",
-              "blur(200px)",
-              "blur(150px)",
-            ],
-          }}
+          className="bg-purple pointer-events-none -z-10 h-[140px] w-[520px] "
+          initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
+          // animate={{
+          //   scale: [1, 0.7, 0.8, 1],
+
+          // }}
           transition={{
             duration: 10,
             times: [0, 0.3, 0.6, 1],
@@ -115,7 +99,7 @@ const Hero = () => {
         alt="background blocks"
         width={800}
         height={1000}
-        className="tablet:w-[440px] laptop:w-[600px] desktop:-right-0 desktop:w-1/2 desktop:-bottom-[110px] tablet:-bottom-1/12 absolute -right-[80px] bottom-0 w-[310px] object-cover opacity-70"
+        className="tablet:w-[440px] laptop:w-[600px] desktop:-right-[72px] desktop:w-1/2 desktop:-bottom-[110px] tablet:-bottom-1/12 absolute -right-[80px] bottom-0 w-[310px] object-cover opacity-70"
         style={{
           maskImage:
             "linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 80%)",
@@ -132,13 +116,17 @@ const Hero = () => {
           />
         </div>
 
-        <button className="border-accent text-accent tablet:mt-[48px] laptop:mt-[64px] desktop:mt-[84px] laptop:w-[195px] laptop:h-[56px] mt-[34px] h-[42px] w-[146px] cursor-pointer rounded-[26px] border-[2px]">
-          <TextButton text="Get Started" invertText={false} />
-        </button>
+        {isMounted && (
+          <button
+            className={`laptop:w-[196px] laptop:h-[56px] tablet:mt-[48px] laptop:mt-[64px] desktop:mt-[84px] mt-[34px] h-[42px] w-[146px] cursor-pointer rounded-[26px] ${resolvedTheme === "dark" ? "border-accent text-accent border-[1px]" : "bg-accent text-white"} `}
+          >
+            <TextButton invertText={false} text="Get Started" />
+          </button>
+        )}
       </div>
 
-      <div className="tablet:items-end tablet:space-y-[10px] laptop:space-y-[20px] desktop:space-y-[24px] flex flex-col items-center space-y-[16px]">
-        <TextTP text="OUT TRUSTED PARTNERS" />
+      <div className="tablet:items-end tablet:space-y-[10px] laptop:space-y-[20px] desktop:space-y-[24px] flex flex-col items-center space-y-[16px] sticky bottom-0 right-0">
+        <TextTP text="OUR TRUSTED PARTNERS" />
         {isMounted && resolvedTheme ? (
           <div className="tablet:space-x-[32px] laptop:space-x-[42px] desktop:space-x-[52px] flex items-center space-x-[19px]">
             <Image
