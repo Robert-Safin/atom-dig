@@ -38,11 +38,18 @@ const Navigation = () => {
 
         <div className="laptop:flex hidden space-x-[24px]">
           <button className="border-text h-[46px] w-[152px] cursor-pointer rounded-[26px] border-[2px]">
-            <TextButton text="Contact Us" invertText={false} />
+            <a href="mailto:info@atomic-digital.io">
+              <TextButton text="Contact Us" invertText={false} />
+            </a>
           </button>
 
           <button className="border-text bg-text text-text-alt h-[46px] w-[152px] cursor-pointer rounded-[26px] border-[2px]">
-            <TextButton text="Client Login" invertText={false} />
+            <a
+              href="https://portal.navfundservices.com/navportalcore/login"
+              target="_blank"
+            >
+              <TextButton text="Client Login" invertText={false} />
+            </a>
           </button>
         </div>
       </div>
@@ -53,8 +60,15 @@ const Navigation = () => {
             className="tablet:w-[34px] tablet:h-[34px] h-[24px] w-[24px] self-end"
           />
           <div className="tablet:space-y-[32px] tablet:mt-[43px] mt-[24px] flex flex-col space-y-[24px]">
-            <TextButton text="Contact Us" invertText={false} />
-            <TextButton text="Client Login" invertText={false} />
+            <a href="mailto:info@atomic-digital.io">
+              <TextButton text="Contact Us" invertText={false} />
+            </a>
+            <a
+              href="https://portal.navfundservices.com/navportalcore/login"
+              target="_blank"
+            >
+              <TextButton text="Client Login" invertText={false} />
+            </a>
           </div>
         </div>
       )}

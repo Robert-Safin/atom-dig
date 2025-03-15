@@ -15,20 +15,8 @@ const Strategies = () => {
   return (
     <div className="mx-auto max-w-[1920px] text-center">
       <div className="laptop:w-[400px] laptop:mb-[58px] desktop:mb-[72px] relative mx-auto mb-[48px] w-[238px]">
-        <motion.div
-          className="bg-purple absolute top-0 left-1/2 h-[150px] w-[320px] -translate-x-1/2"
-          initial={{ scale: 1, rotate: 0, filter: "blur(180px)" }}
-          animate={
-            {
-              // scale: [1, 0.8, 0.7, 1],
-            }
-          }
-          transition={{
-            duration: 10,
-            times: [0, 0.3, 0.6, 1],
-            ease: "easeInOut",
-            repeat: Infinity,
-          }}
+        <div
+          className="bg-purple absolute top-0 left-1/2 h-[202px] w-[285px] -translate-x-1/2 blur-[200px]"
           style={{
             willChange: "filter",
             borderRadius: "50% 50%",
@@ -70,47 +58,17 @@ const Strategies = () => {
           />
 
           <motion.div
-            className="bg-teal absolute -bottom-1/4 left-0 h-1/2 w-1/12 opacity-50"
-            initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
-            animate={{
-              scale: [1, 0.8, 0.7, 1],
-              filter: [
-                "blur(150px)",
-                "blur(100px)",
-                "blur(200px)",
-                "blur(150px)",
-              ],
-            }}
-            transition={{
-              duration: 10,
-              times: [0, 0.3, 0.6, 1],
-              ease: "easeInOut",
-              repeat: Infinity,
-            }}
+            className="bg-teal absolute -bottom-1/4 left-0 h-[202px] w-[285px]"
+            initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
             style={{
               willChange: "filter",
             }}
           />
-          <motion.div
-            className="bg-teal absolute top-0 right-0 h-1/2 w-1/12 opacity-50"
-            initial={{ scale: 1, rotate: 0, filter: "blur(150px)" }}
-            animate={{
-              scale: [1, 0.8, 0.7, 1],
-              filter: [
-                "blur(150px)",
-                "blur(100px)",
-                "blur(200px)",
-                "blur(150px)",
-              ],
-            }}
-            transition={{
-              duration: 10,
-              times: [0, 0.3, 0.6, 1],
-              ease: "easeInOut",
-              repeat: Infinity,
-            }}
+          <div
+            className="bg-teal absolute top-0 right-0 h-[202px] w-[285px] opacity-50 blur-[200px]"
             style={{
               willChange: "filter",
+              borderRadius: "50% 50%",
             }}
           />
         </div>

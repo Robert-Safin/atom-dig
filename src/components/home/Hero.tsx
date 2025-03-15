@@ -22,7 +22,7 @@ const Hero = () => {
             willChange: "filter",
             borderRadius: "50% 50%",
           }}
-          className="bg-teal pointer-events-none relative top-[48px] -right-[24px] -z-10 h-[120px] w-[1200px] self-end rounded-full"
+          className="bg-teal pointer-events-none relative top-[48px] -right-[24px] -z-10 h-[120px] w-[1200px] self-end"
           initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
           // animate={{
           //   scale: [1, 0.8, 0.7, 1],
