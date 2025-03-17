@@ -41,13 +41,11 @@ const CTA = () => {
             </div>
 
             <BorderBeam
-              size={800}
-              initialOffset={0}
               className="via-ring-glow from-transparent to-transparent"
+              duration={6}
+              size={400}
               transition={{
                 type: "spring",
-                stiffness: 60,
-                damping: 200,
               }}
             />
           </div>

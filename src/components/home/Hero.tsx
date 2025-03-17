@@ -47,7 +47,7 @@ const Hero = () => {
       />
 
       <div>
-        <div className="tablet:w-[474px] laptop:w-[700px] desktop:w-[791px] w-full text-balance">
+        <div className="tablet:w-[474px] laptop:w-[700px] desktop:w-[791px] laptop:mt-[80px] desktop:mt-0 w-full text-balance">
           <TextHero
             text="A Boutique Digital Asset Fund Specializing in Quantitative Trading
         Strategies"
