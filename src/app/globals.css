@@ -43,7 +43,7 @@
   --text-stroke-shine: rgba(150, 142, 213, 1);
   --ring: rgba(137, 130, 208, 1);
   --background-opaque: rgba(197, 198, 215, 0.4);
-  --ring-glow: red;
+  --ring-glow: black;
   --strategy-stroke: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.3) 0%,

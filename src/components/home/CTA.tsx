@@ -47,7 +47,7 @@ const CTA = () => {
               transition={{
                 type: "spring",
                 stiffness: 60,
-                damping: 20,
+                damping: 200,
               }}
             />
           </div>

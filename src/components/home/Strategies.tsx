@@ -2,7 +2,7 @@ import { useTheme } from "next-themes";
 import H2 from "../typography/H2";
 import Card from "./Card";
 import { useEffect, useState } from "react";
-import { motion } from "motion/react";
+import Blob from "../common/Blob";
 
 const Strategies = () => {
   const { resolvedTheme } = useTheme();
@@ -15,13 +15,12 @@ const Strategies = () => {
   return (
     <div className="mx-auto max-w-[1920px] text-center">
       <div className="laptop:w-[400px] laptop:mb-[58px] desktop:mb-[72px] relative mx-auto mb-[48px] w-[238px]">
-        <div
-          className="bg-purple absolute top-0 left-1/2 h-[202px] w-[285px] -translate-x-1/2 blur-[200px]"
-          style={{
-            willChange: "filter",
-            borderRadius: "50% 50%",
-          }}
+        <Blob
+          className={
+            "bg-purple absolute top-0 left-1/2 h-[202px] w-[285px] -translate-x-1/2"
+          }
         />
+
         <H2 text="Our Strategies and Philosophy" />
       </div>
       {isMounted && (
@@ -56,20 +55,16 @@ const Strategies = () => {
             title="Active systematic trend"
             text="Long short directional strategies to take advantage of strong trending crypto markets"
           />
-
-          <motion.div
-            className="bg-teal absolute -bottom-1/4 left-0 h-[202px] w-[285px]"
-            initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
-            style={{
-              willChange: "filter",
-            }}
+          <Blob
+            className={
+              "bg-teal absolute -bottom-1/4 left-0 h-[202px] w-[285px]"
+            }
           />
-          <div
-            className="bg-teal absolute top-0 right-0 h-[202px] w-[285px] opacity-50 blur-[200px]"
-            style={{
-              willChange: "filter",
-              borderRadius: "50% 50%",
-            }}
+
+          <Blob
+            className={
+              "bg-teal absolute top-0 right-0 h-[202px] w-[285px] opacity-50"
+            }
           />
         </div>
       )}

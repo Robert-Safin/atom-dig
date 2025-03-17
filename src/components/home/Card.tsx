@@ -16,7 +16,7 @@ const Card: FC<Props> = (props) => {
       style={{ backgroundImage: "var(--strategy-stroke)" }}
     >
       <div className="bg-card-bg laptop:pt-[26px] laptop:pb-[38px] relative z-10 overflow-hidden rounded-[21px] pt-[19px] pb-[28px]">
-        <div className="bg-purple left absolute top-0 -z-10 h-1/12 w-full blur-[100px]" />
+        <div className="bg-purple/75 left absolute top-0 -z-10 h-1/12 w-full blur-[100px]" />
         <Image
           src={props.img}
           alt={"strategy icon"}

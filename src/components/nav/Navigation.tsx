@@ -4,6 +4,8 @@ import { Menu, X } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import TextButton from "../typography/TextButton";
+import { AnimatePresence, motion } from "motion/react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navigation = () => {
   const { resolvedTheme } = useTheme();
@@ -36,14 +38,14 @@ const Navigation = () => {
           <Menu className="font-extrabold text-white" />
         </div>
 
-        <div className="laptop:flex hidden space-x-[24px]">
-          <button className="border-text h-[46px] w-[152px] cursor-pointer rounded-[26px] border-[2px]">
+        <div className="laptop:flex hidden items-center space-x-[24px]">
+          <button className="border-text hover:border-accent hover:text-accent h-[46px] w-[152px] cursor-pointer rounded-[26px] border-[2px] transition-all duration-700">
             <a href="mailto:info@atomic-digital.io">
               <TextButton text="Contact Us" invertText={false} />
             </a>
           </button>
 
-          <button className="border-text bg-text text-text-alt h-[46px] w-[152px] cursor-pointer rounded-[26px] border-[2px]">
+          <button className="border-text bg-text text-text-alt hover:bg-accent hover:border-accent h-[46px] w-[152px] cursor-pointer rounded-[26px] border-[2px] transition-all duration-700">
             <a
               href="https://portal.navfundservices.com/navportalcore/login"
               target="_blank"
@@ -51,27 +53,38 @@ const Navigation = () => {
               <TextButton text="Client Login" invertText={false} />
             </a>
           </button>
+          <ThemeToggle />
         </div>
       </div>
-      {isOpen && (
-        <div className="bg-text-alt tablet:pt-[24px] tablet:pr-[24px] tablet:pl-[34px] laptop:hidden fixed top-0 right-0 z-50 flex h-screen w-[243px] flex-col pt-[12px] pr-[12px] pl-[26px]">
-          <X
-            onClick={() => setIsOpen(false)}
-            className="tablet:w-[34px] tablet:h-[34px] h-[24px] w-[24px] self-end"
-          />
-          <div className="tablet:space-y-[32px] tablet:mt-[43px] mt-[24px] flex flex-col space-y-[24px]">
-            <a href="mailto:info@atomic-digital.io">
-              <TextButton text="Contact Us" invertText={false} />
-            </a>
-            <a
-              href="https://portal.navfundservices.com/navportalcore/login"
-              target="_blank"
-            >
-              <TextButton text="Client Login" invertText={false} />
-            </a>
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="bg-text-alt tablet:pt-[24px] tablet:pr-[24px] tablet:pl-[34px] laptop:hidden fixed top-0 right-0 z-50 flex h-screen w-[243px] flex-col pt-[12px] pr-[12px] pl-[26px]"
+            initial={{ right: "-100%" }}
+            animate={{ right: 0 }}
+            exit={{ right: "-100%" }}
+          >
+            <X
+              onClick={() => setIsOpen(false)}
+              className="tablet:w-[34px] tablet:h-[34px] h-[24px] w-[24px] self-end"
+            />
+            <div className="tablet:space-y-[32px] tablet:mt-[43px] mt-[24px] flex flex-col space-y-[24px]">
+              <a href="mailto:info@atomic-digital.io">
+                <TextButton text="Contact Us" invertText={false} />
+              </a>
+              <a
+                href="https://portal.navfundservices.com/navportalcore/login"
+                target="_blank"
+              >
+                <TextButton text="Client Login" invertText={false} />
+              </a>
+              <div className="mt-[24px]">
+                <ThemeToggle />
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

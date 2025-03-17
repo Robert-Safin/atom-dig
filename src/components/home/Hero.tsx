@@ -4,7 +4,7 @@ import TextHero from "../typography/TextHero";
 import TextTP from "../typography/TextTP";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { motion } from "motion/react";
+import Blob from "../common/Blob";
 
 const Hero = () => {
   const { resolvedTheme } = useTheme();
@@ -15,83 +15,21 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="tablet:pb-[20px] laptop:pb-[26px] desktop:pb-[32px] tablet:px-[24px] tablet:pt-[100px] desktop:pt-[200px] laptop:px-[56px] desktop:px-[72px] tablet:h-[540px] laptop:h-[720px] desktop:h-screen relative z-0 mx-auto flex h-[680px] max-w-[1920px] flex-col justify-between px-[21px] pt-[82px] pb-[32px]">
+    <div className="tablet:pb-[20px] laptop:pb-[26px] desktop:pb-[32px] tablet:px-[24px] tablet:pt-[100px] desktop:pt-[200px] laptop:px-[56px] desktop:px-[72px] tablet:h-[540px] laptop:h-[720px] desktop:h-screen relative z-0 mx-auto flex h-[630px] max-w-[1920px] flex-col justify-between px-[21px] pt-[82px] pb-[32px]">
       <div className="absolute top-0 left-0 -z-10 flex h-full w-full max-w-screen flex-col justify-between">
-        <motion.div
-          style={{
-            willChange: "filter",
-            borderRadius: "50% 50%",
-          }}
-          className="bg-teal pointer-events-none relative top-[48px] -right-[24px] -z-10 h-[120px] w-[1200px] self-end"
-          initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
-          // animate={{
-          //   scale: [1, 0.8, 0.7, 1],
-
-          // }}
-          transition={{
-            duration: 10,
-            times: [0, 0.3, 0.6, 1],
-            ease: "easeInOut",
-            repeat: Infinity,
-          }}
+        <Blob
+          className={
+            "bg-teal relative top-[48px] -right-[24px] -z-10 h-[120px] w-[1200px] self-end"
+          }
         />
-        <motion.div
-          style={{
-            willChange: "filter",
-            borderRadius: "50% 50%",
-          }}
-          className="bg-purple pointer-events-none -z-10 h-[140px] w-[720px]"
-          initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
-          // animate={{
-          //   scale: [1, 0.8, 0.9, 1],
 
-          // }}
-          transition={{
-            duration: 10,
-            times: [0, 0.3, 0.6, 1],
-            ease: "easeInOut",
-            repeat: Infinity,
-          }}
-        />
+        <Blob className={"bg-purple relative -z-10 h-[140px] w-[720px]"} />
       </div>
 
       <div className="absolute top-0 right-0 flex h-full w-full max-w-screen items-center justify-between">
-        <motion.div
-          style={{
-            willChange: "filter",
-            borderRadius: "50% 50%",
-          }}
-          className="bg-teal pointer-events-none -z-10 h-[140px] w-[520px]"
-          initial={{ scale: 1, rotate: 0, filter: "blur(220px)" }}
-          // animate={{
-          //   scale: [1, 0.9, 0.8, 1],
+        <Blob className={"bg-teal relative -z-10 h-[140px] w-[520px]"} />
 
-          // }}
-          transition={{
-            duration: 10,
-            times: [0, 0.3, 0.6, 1],
-            ease: "easeInOut",
-            repeat: Infinity,
-          }}
-        />
-        <motion.div
-          style={{
-            willChange: "filter",
-            borderRadius: "50% 50%",
-          }}
-          className="bg-purple pointer-events-none -z-10 h-[140px] w-[520px]"
-          initial={{ scale: 1, rotate: 0, filter: "blur(200px)" }}
-          // animate={{
-          //   scale: [1, 0.7, 0.8, 1],
-
-          // }}
-          transition={{
-            duration: 10,
-            times: [0, 0.3, 0.6, 1],
-            ease: "easeInOut",
-            repeat: Infinity,
-          }}
-        />
+        <Blob className={"bg-purple relative -z-10 h-[140px] w-[520px]"} />
       </div>
 
       <Image
@@ -118,7 +56,7 @@ const Hero = () => {
 
         {isMounted && (
           <button
-            className={`laptop:w-[196px] laptop:h-[56px] tablet:mt-[48px] laptop:mt-[64px] desktop:mt-[84px] mt-[34px] h-[42px] w-[146px] cursor-pointer rounded-[26px] ${resolvedTheme === "dark" ? "border-accent text-accent border-[1px]" : "bg-accent text-white"} `}
+            className={`laptop:w-[196px] laptop:h-[56px] tablet:mt-[48px] laptop:mt-[64px] desktop:mt-[84px] relative z-10 mt-[34px] h-[42px] w-[146px] !cursor-pointer rounded-[26px] transition-all duration-700 ${resolvedTheme === "dark" ? "border-accent text-accent hover:bg-accent hover:text-text-alt border-[1px]" : "bg-accent border-accent hover:text-accent border-[1px] text-white hover:bg-[rgba(0,0,0,0)]"} `}
           >
             <TextButton invertText={false} text="Get Started" />
           </button>
