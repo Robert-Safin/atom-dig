@@ -28,32 +28,32 @@ const Strategies = () => {
           <Card
             img={`/strategy/${resolvedTheme}/Active.png`}
             title="Active systematic trend"
-            text="Long short directional strategies to take advantage of strong trending crypto markets"
+            text="Long short directional strategies to take advantage of strong trending crypto markets."
           />
           <Card
             img={`/strategy/${resolvedTheme}/Delta-Neutral.png`}
-            title="Active systematic trend"
-            text="Long short directional strategies to take advantage of strong trending crypto markets"
+            title="Delta-neutral"
+            text="Hedged strategies that generate more consistent and less volatile returns."
           />
           <Card
             img={`/strategy/${resolvedTheme}/Diversified.png`}
-            title="Active systematic trend"
-            text="Long short directional strategies to take advantage of strong trending crypto markets"
+            title="Diversified Multi-Strategy"
+            text="Combining more than 20 different strategies, we produce uncorrelated returns across our entire portfolio."
           />
           <Card
             img={`/strategy/${resolvedTheme}/Automation.png`}
-            title="Active systematic trend"
-            text="Long short directional strategies to take advantage of strong trending crypto markets"
+            title="Automation"
+            text="All our strategies are fully automated, integrated with a risk management framework."
           />
           <Card
             img={`/strategy/${resolvedTheme}/Risk-Control.png`}
-            title="Active systematic trend"
-            text="Long short directional strategies to take advantage of strong trending crypto markets"
+            title="Risk control"
+            text="Additional human controlled risk framework to safeguard against systematic failures and counterparty risks."
           />
           <Card
             img={`/strategy/${resolvedTheme}/Transparency.png`}
-            title="Active systematic trend"
-            text="Long short directional strategies to take advantage of strong trending crypto markets"
+            title="Transparency"
+            text="Investors have transparent views of fund performance, guaranteed by a global leading fund administrator (NAV Consulting)."
           />
           <Blob
             className={
