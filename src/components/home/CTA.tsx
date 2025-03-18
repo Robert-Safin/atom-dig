@@ -42,7 +42,7 @@ const CTA = () => {
 
             <BorderBeam
               className="via-ring-glow from-transparent to-transparent"
-              duration={6}
+              duration={4}
               size={400}
               transition={{
                 type: "spring",

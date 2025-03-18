@@ -18,7 +18,7 @@ const GetInTouch = () => {
       {isMounted && (
         <>
           <div
-            className={`desktop:max-w-[1260px] laptop:max-w-[840px] tablet:max-w-[630px] tablet:px-[130px] laptop:px-[220px] desktop:px-[400px] desktop:py-[134px] tablet:mt-[82px] laptop:mt-[131px] desktop:mt-[164px] tablet:mb-[60px] desktop:mb-[76px] relative mx-auto mt-[72px] mb-[80px] max-w-[304px] rounded-[36px] border-[1px] border-teal-400/10 px-[36px] py-[96px] ${resolvedTheme === "dark" ? "bg-[rgba(20,26,36,0.5)]" : "bg-[rgba(187,204,214,0.5)]"} `}
+            className={`desktop:max-w-[1280px] laptop:max-w-[840px] tablet:max-w-[630px] tablet:px-[130px] laptop:px-[220px] desktop:px-[400px] desktop:py-[134px] tablet:mt-[82px] laptop:mt-[131px] desktop:mt-[164px] tablet:mb-[60px] desktop:mb-[76px] relative mx-auto mt-[72px] mb-[80px] max-w-[304px] rounded-[36px] border-[1px] border-teal-400/10 px-[36px] py-[96px] ${resolvedTheme === "dark" ? "bg-[rgba(20,26,36,0.5)]" : "bg-[rgba(187,204,214,0.5)]"} `}
           >
             <Blob className="bg-blue desktop:opacity-50 absolute right-1/12 bottom-0 -z-10 h-[202px] w-[285px]" />
             <a href="mailto:info@atomic-digital.io">
