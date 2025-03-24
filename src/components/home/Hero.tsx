@@ -13,7 +13,12 @@ const Hero = () => {
   useEffect(() => {
     setIsMounted(true);
   }, []);
-
+  const scrollToSection = () => {
+    const element = document.getElementById("get-in-touch");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="tablet:pb-[20px] laptop:pb-[26px] desktop:pb-[32px] tablet:px-[24px] tablet:pt-[100px] desktop:pt-[200px] laptop:px-[56px] desktop:px-[72px] tablet:h-[540px] laptop:h-[720px] desktop:h-screen relative z-0 mx-auto flex h-[630px] max-w-[1920px] flex-col justify-between px-[21px] pt-[82px] pb-[32px]">
       <div className="absolute top-0 left-0 -z-10 flex h-full w-full max-w-screen flex-col justify-between">
@@ -56,6 +61,7 @@ const Hero = () => {
 
         {isMounted && (
           <button
+            onClick={scrollToSection}
             className={`laptop:w-[196px] laptop:h-[56px] tablet:mt-[48px] laptop:mt-[64px] desktop:mt-[84px] relative z-10 mt-[34px] h-[42px] w-[146px] !cursor-pointer rounded-[26px] transition-all duration-700 ${resolvedTheme === "dark" ? "border-accent text-accent hover:bg-accent hover:text-text-alt border-[1px]" : "bg-accent border-accent hover:text-accent border-[1px] text-white hover:bg-[rgba(0,0,0,0)]"} `}
           >
             <TextButton invertText={false} text="Get Started" />
